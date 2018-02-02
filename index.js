@@ -22,7 +22,7 @@ function viewCart() {
   }
   var announcement = 'In your cart, you have '
   if (cart.length === 1) {
-    announcement += `${cart[0]} at ${cart[1]}.`;
+    announcement += `${cart[0]} at ${cart[0]}.`;
   }
   return announcement;
 }
