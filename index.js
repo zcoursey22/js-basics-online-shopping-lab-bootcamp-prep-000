@@ -24,6 +24,7 @@ function viewCart() {
   if (cart.length === 1) {
     announcement += `${cart[0][0]} at ${cart[0][1]}.`;
   }
+  return announcement;
 }
 
 function total() {
