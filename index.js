@@ -52,9 +52,12 @@ function total() {
 function removeFromCart(item) {
   for (var i = 0; i < cart.length; i++) {
     if (item === Object.keys(cart[i])) {
-      
+      delete cart[i].item;
+      return cart;
     }
   }
+  console.log('That item is not in your cart.');
+  return cart;
 }
 
 function placeOrder(cardNumber) {
