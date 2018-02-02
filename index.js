@@ -10,7 +10,6 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
  var random = Math.floor(Math.random() * 100);
  cart.push({[item]: random});
  console.log(`${item} has been added to your cart.`);
@@ -18,7 +17,13 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+  if (cart.length === 0) {
+    console.log('Your shopping cart is empty.');
+  }
+  var announcement = 'In your cart, you have '
+  if (cart.length === 1) {
+    announcement += `${cart[0][0]} at ${cart[0][1]}.`;
+  }
 }
 
 function total() {
